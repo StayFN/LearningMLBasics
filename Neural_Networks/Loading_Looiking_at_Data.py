@@ -3,6 +3,7 @@ from tensorflow import keras
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 data = keras.datasets.fashion_mnist
 
 (train_images, train_labels), (test_images, test_labels) = data.load_data()
@@ -39,3 +40,21 @@ model.fit(train_images, train_labels, epochs=5)# epochs essentially means how ma
 test_loss, test_acc = model.evaluate(test_images, test_labels)
 
 print(f"tested Acc: {test_acc}")
+
+# Use the model
+
+prediction = model.predict(test_images)
+
+for i in range(5):
+    plt.grid(False)
+    plt.imshow
+    plt.imshow(test_images[i], cmap=plt.cm.binary)
+    plt.xlabel("Actual: " + class_names[test_labels[i]])
+    plt.title("Prediction: " + class_names[np.argmax(prediction[i])])
+    plt.show()
+
+print(class_names[np.argmax(prediction[0])])
+
+
+
+
