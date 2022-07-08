@@ -14,7 +14,7 @@ Y = cancer.target
 
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, Y, test_size=0.2)
 
-#print(x_train, y_train)
+# print(x_train, y_train)
 classes = ["malignant", "benign"]
 
 # SVM Trying to classify data by spltting it with a line (in 2d) if that's not possible we can add a dimension with a
