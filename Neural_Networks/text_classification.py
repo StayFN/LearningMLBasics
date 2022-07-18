@@ -44,7 +44,7 @@ def review_encode(s):
 
     return encoded
 #Model
-"""
+
 model = keras.Sequential()
 model.add(keras.layers.Embedding(88000, 16))
 # Embedding layer tries to group words in a similair way (finds word vectors) 16 dimensional here (10000 Word vectors)
@@ -76,7 +76,6 @@ print(results)
 #Saving Model
 
 model.save("model.h5") # h5 extension for saved model in keras/tensorflow, saves model in binary data
-"""
 
 #Load model
 model = keras.models.load_model("model.h5")
